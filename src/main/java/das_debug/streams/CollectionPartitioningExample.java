@@ -1,7 +1,9 @@
 package das_debug.streams;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -21,5 +23,14 @@ public class CollectionPartitioningExample {
         Map<Integer,Long> map2 = ohMy.collect(Collectors.groupingBy(String::length,Collectors.counting()));
         System.out.println(map2);
 
+
+        ohMy = Stream.of("lions", "tigers", "bears");
+
+        //Map<Integer,Optional<Character>> map3 = ohMy.collect(
+        //        Collectors.groupingBy(
+        //        String::length,
+        //        Collectors.mapping(s->s.charAt(0),
+        //        Collectors.minBy(Comparator.naturalOrder()))));
+        //System.out.println(map3);
     }
 }

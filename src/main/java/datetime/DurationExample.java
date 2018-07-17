@@ -1,6 +1,7 @@
 package datetime;
 
 import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 public class DurationExample {
     public static void main(String args[]) {
@@ -17,5 +18,15 @@ public class DurationExample {
         Duration everyNano = Duration.ofNanos(1); //
         System.out.println(everyNano);
 
+        // Another example
+        daily = Duration.of(1, ChronoUnit.DAYS);
+        System.out.println(daily);
+        hourly = Duration.of(1, ChronoUnit.HOURS);
+        Duration halfDay = Duration.of(12,ChronoUnit.HOURS);
+        System.out.println(halfDay);
+        everyMinute = Duration.of(1, ChronoUnit.MINUTES);
+        everyTenSeconds = Duration.of(10, ChronoUnit.SECONDS);
+        everyMilli = Duration.of(1, ChronoUnit.MILLIS);
+        everyNano = Duration.of(1, ChronoUnit.NANOS);
     }
 }

@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -25,12 +26,14 @@ public class CollectionPartitioningExample {
 
 
         ohMy = Stream.of("lions", "tigers", "bears");
+        Map<Integer,Optional<Character>> map3 = null ;//
+        System.out.println(map3) ;
+        /*
+        Map<Integer,Optional<Character>> map3 = ohMy.collect(
+                Collectors.groupingBy(
+                String::length,
+             Collectors.mapping(s->s.charAt(0),Collectors.minBy(Comparator.reverseOrder()))));
 
-        //Map<Integer,Optional<Character>> map3 = ohMy.collect(
-        //        Collectors.groupingBy(
-        //        String::length,
-        //        Collectors.mapping(s->s.charAt(0),
-        //        Collectors.minBy(Comparator.naturalOrder()))));
-        //System.out.println(map3);
+        System.out.println(map3);*/
     }
 }

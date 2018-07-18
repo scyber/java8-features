@@ -21,8 +21,10 @@ public class LocaleExample {
                 .build();
         System.out.println(l1);
         ArrayList<String> l = new ArrayList<>();
-        //ToDo print locales
-        //Stream<String> lan = Stream.of(Locale.getAvailableLocales()).filter(s->s.toString().contains("US")).forEach();
+        //print locales
+        System.out.println("Print available locales ");
+        Stream<Locale> lan = Stream.of(Locale.getAvailableLocales());
+        lan.filter(s->s.toString().contains("US")).forEach(System.out::println);
 
     }
 }

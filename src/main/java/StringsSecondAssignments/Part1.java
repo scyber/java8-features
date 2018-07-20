@@ -53,6 +53,9 @@ public class Part1 {
         return dna.substring(startIndex,minIndex + 3);
 
     }
+    public static void printAllGenes (String dna){
+
+    }
     public static void testDNA(){
         String demoDNA = "ATGBDCTAABCDNFGTAGHFN";
         System.out.println("dna length " + demoDNA.length());
@@ -61,6 +64,9 @@ public class Part1 {
         System.out.println(findStopCodon(demoDNA, 0, "TAA"));
         System.out.println(findStopCodon(demoDNA, 0, "TAG"));
 
+        System.out.println(findGene(demoDNA));
+
+        demoDNA = "BDFATGCDFGDETAG";
         System.out.println(findGene(demoDNA));
     }
 

@@ -1,4 +1,4 @@
-package StringsSecondAssignments;
+package StringsSecondAssignments.week2;
 
 public class Part1 {
     /*
@@ -54,6 +54,7 @@ public class Part1 {
 
     }
     public static void printAllGenes (String dna){
+    	
 
     }
     public static void testDNA(){

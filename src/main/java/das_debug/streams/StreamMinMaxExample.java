@@ -58,6 +58,7 @@ public class StreamMinMaxExample {
         System.out.println(stringTreeSet);
 
         //peek example
+        System.out.println("Peek example");
         Stream<String> peekExample = Stream.of("black bear", "brown beak", "grizzly bear", "gosha bear");
         long count = peekExample.filter(x->x.startsWith("g")).peek(System.out::println).count();
 

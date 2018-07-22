@@ -9,11 +9,12 @@ public class Part1 {
      */
 
     public static void main(String args[]){
-        String stopTAA = "TAA";
+        /*String stopTAA = "TAA";
         String stopTAG = "TAG";
         String stopTGA = "TGA";
         String startATG = "ATG";
-        testDNA();
+        testDNA();*/
+        testAllGenes();
 
 
 
@@ -54,7 +55,37 @@ public class Part1 {
 
     }
     public static void printAllGenes (String dna){
-    	
+    	String tmpDna = dna;
+    	int indexDna = 0;
+    	while(true) {
+    		//FindGene
+    		String gene = findGene(tmpDna);
+    		System.out.println("gene");
+    		System.out.println(gene);
+    		if ( gene.equals("")) {
+    			break;
+    		} else {
+    			
+    			//move dna string to the gene + gene.length()
+    			indexDna = tmpDna.indexOf(gene)+ gene.length() ;
+    			//System.out.println(indexDna);
+    			//System.out.println(tmpDna.length());
+    			/*if (indexDna >= (tmpDna.length() -1) | indexDna == -1) {
+    				break;
+    			} else {*/
+    			
+    			tmpDna = tmpDna.substring(indexDna);
+    			//System.out.println("tmpDNA");
+    			//System.out.println(tmpDna);
+    			//}
+    		}
+    		//if Gene != "" print gene
+    		// get Index of Gene + dna.length
+    		//start from new index dna.length()
+    		//if dna is Empty break
+    		
+    		
+    	}
 
     }
     public static void testDNA(){
@@ -69,6 +100,19 @@ public class Part1 {
 
         demoDNA = "BDFATGCDFGDETAG";
         System.out.println(findGene(demoDNA));
+    }
+    public static void testAllGenes() {
+    	String oneDNA = "ATGBCDDFGTAA";
+    	System.out.println("One dna");
+    	printAllGenes( oneDNA);
+    	System.out.println("two dna");
+    	String twoDNA = "ATGBCDTAABBBATGAAABBBCCCTAGCCCDDDEEE";
+    	printAllGenes( twoDNA);
+    	System.out.println("three dna");
+    	String threeDNA = "ATGAAABBBTAAATGAAABBBCCCTAAATGAAABBBCCCDDDEEETAA";
+    	printAllGenes(threeDNA);
+    		
+    	
     }
 
 }

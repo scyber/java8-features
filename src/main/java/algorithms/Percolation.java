@@ -1,7 +1,7 @@
 package algorithms;
 
 
-public class DemoAlgo {
+public class Percolation {
     public static void main(String args[]){
 
     }

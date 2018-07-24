@@ -14,5 +14,7 @@ public class DateTimeExampleFormatter {
 
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm");
         System.out.println(dateTime.format(f)); // January 20, 2020, 11:12
+        DateTimeFormatter f1 = DateTimeFormatter.ofPattern("hh:mm");
+        System.out.println(dateTime.format(f1));
     }
 }

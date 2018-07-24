@@ -1,5 +1,8 @@
 package StringsSecondAssignments.week2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Part3 {
 
 	public static void main(String[] args) {
@@ -42,28 +45,43 @@ public class Part3 {
             return dna.length();
     }
 	public static int countGenes(String dna) {
-		int counter = 0;
-		String tmpDna = dna;
-    	int indexDna = 0;
-    	while(true) {
-    		//FindGene
-    		String gene = findGene(tmpDna);
-    		//System.out.println("gene");
-    		//System.out.println(gene);
-    		
-    		
-    		if ( gene.equals("")) {
-    			break;
-    		} else {
-    			counter++;
-    			indexDna = tmpDna.indexOf(gene)+ gene.length();    			
-    			tmpDna = tmpDna.substring(indexDna);
-    		}
-    		
-    		
-    	}
 
-		return counter;
+		return getGenes(dna).size();
+	}
+	public static List<String> getGenes(String dna){
+        int counter = 0;
+        String tmpDna = dna;
+        int indexDna = 0;
+        List<String> genes = new ArrayList<>();
+        while(true) {
+            //FindGene
+            String gene = findGene(tmpDna);
+            //System.out.println("gene");
+            //System.out.println(gene);
+
+
+            if ( gene.equals("")) {
+                break;
+            } else {
+                //counter++;
+                genes.add(gene);
+                indexDna = tmpDna.indexOf(gene)+ gene.length();
+                tmpDna = tmpDna.substring(indexDna);
+            }
+
+
+        }
+
+        return genes;
+    }
+	public static double cgRatio (String dna){
+		//Count Cs and Gs and divide by Gene lenght
+        String gene = findGene(dna);
+        int gCounter = Part2.howMany("G", gene) ;
+        int cCounter = Part2.howMany("C", gene);
+
+        return (gCounter + cCounter)/gene.length();
+
 	}
 	public static void testGeneCounter() {
 		System.out.print("should print 2 ");

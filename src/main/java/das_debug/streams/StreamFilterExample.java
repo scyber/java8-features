@@ -14,15 +14,17 @@ public class StreamFilterExample {
 
         Stream<String> s = Stream.of("chuck", "chuck", "chuck" , "chuck", "chimpansee");
         s.distinct().forEach(System.out::println);
-
+       
+        
+        System.out.println("Iterate example ");
         Stream<Integer> integerStream = Stream.iterate(1,x->x+1);
-        integerStream.skip(2).limit(5).forEach(System.out::print);
-
+        integerStream.skip(2).limit(5).forEach(System.out::println);
+        System.out.println("Finish iterate example");
 
         Stream<String> sMap = Stream.of("gorilla", "chuck", "chimpansee");
-        System.out.println();
-        sMap.map(String::length).forEach(System.out::print);
-        System.out.println();
+        System.out.println("ToDo map ");
+        sMap.map(String::length).forEach(System.out::println);
+        System.out.println("Finish map");
 
         //Using FlatMap example
         List<String> zero = Arrays.asList();

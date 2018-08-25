@@ -15,7 +15,6 @@ public class Part2 {
 		String tmpB = b;
 		int counter = 0;
 		int tmpAIndex = 0;
-		Map <String,Integer> res = new HashMap<>();
 		while(tmpB.contains(tmpA)) {	
 				counter++;
 				tmpAIndex = tmpB.indexOf(tmpA) + tmpA.length();

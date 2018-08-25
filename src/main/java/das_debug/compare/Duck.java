@@ -1,6 +1,9 @@
 package das_debug.compare;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Duck implements Comparable<Duck> {
     private String name;

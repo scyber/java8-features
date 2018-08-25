@@ -1,6 +1,5 @@
 package das_debug.streams;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;

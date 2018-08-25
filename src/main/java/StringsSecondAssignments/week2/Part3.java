@@ -1,8 +1,5 @@
 package StringsSecondAssignments.week2;
 
-import java.util.ArrayList;
-import java.util.stream.Stream;
-
 public class Part3 {
 
 	public static void main(String[] args) {
